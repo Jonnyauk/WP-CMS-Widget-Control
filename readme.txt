@@ -10,7 +10,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Remove any core, theme or plugin widgets from the Widgets admin screen.
 
 == Description ==
-[Widgets](http://codex.wordpress.org/WordPress_Widgets \"WordPress Codex - Widgets\") can be added to many areas within your theme, but you (and your users) may not need access to all the widgets available.
+<a href="http://codex.wordpress.org/WordPress_Widgets">Widgets</a> can be added to many areas within your theme, but you (and your users) may not need access to all the widgets available.
 
 WordPress, your theme and plugins add additional widgets available to be used within your theme. This plugin provides simple admin controls that can remove any core WordPress widget, along with all (well coded) additional third-party widgets. Great for simplifying a cluttered widget screen, or if you limit user access to a smaller number of core widgets.
 
