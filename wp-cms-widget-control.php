@@ -162,9 +162,8 @@ class wpcms_widget_control{
 	 */
 	function section_one_callback() {
 
-
 		echo '<p>';
-		esc_html_e( 'Tick the options below to hide them from the widget screen and stop them being used on your site.', $this->plugin );
+		esc_html_e( 'Tick checkbox to remove the selected widget from the widget admin area.', $this->plugin );
 		echo '</p>';
 		echo '<p><strong>';
 		esc_html_e( 'WARNING - DO NOT REMOVE WIDGETS YOU ARE CURRENTLY USING - you risk deleting them (and their settings) from your site - so use with caution!', $this->plugin );
@@ -199,10 +198,8 @@ class wpcms_widget_control{
 		$clean_data = array();
 
 		if ( !empty($input) && is_array($input) ){
-			foreach ($input as $key => $value) {
-				if ($value == 1){
-					$clean_data[$key] = $value;
-				}
+			foreach ( $input as $key => $value ) {
+				$clean_data[$key] = ( $value == 1 ) ? $value : 0;
 			}
 		}
 
@@ -213,7 +210,7 @@ class wpcms_widget_control{
 
 	/**
 	 *
-	 * Sanitize input before saving like any good plugin should!
+	 * Remove those pesky widgets
 	 *
 	 */
 	function unregister_widgets() {
