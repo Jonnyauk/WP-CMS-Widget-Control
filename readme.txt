@@ -3,7 +3,7 @@ Contributors: Jonnyauk
 Tags: widget, widgets, admin
 Requires at least: 3.0.1
 Tested up to: 3.9.1
-Stable tag: 1.0
+Stable tag: 1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -14,7 +14,7 @@ Remove any core, theme or plugin widgets from the Widgets admin screen.
 
 WordPress, your theme and plugins add additional widgets available to be used within your theme. This plugin provides simple admin controls that can remove any core WordPress widget, along with all (well coded) additional third-party widgets. Great for simplifying a cluttered widget screen, or if you limit user access to a smaller number of core widgets.
 
-Can remove the following core WordPress widgets:
+This plugin can remove the following core WordPress widgets:
 
 * Pages widget
 * Calendar widget
@@ -47,5 +47,9 @@ No - all active, configured widget settings in your theme will be lost when you 
 2. A simplifed widget control screen (Appearance->Widgets)
 
 == Changelog ==
+
+= 1.1 =
+* Small text changes and tested full compatibility with WordPress 3.9x.
+
 = 1.0 =
 * Initial release.
