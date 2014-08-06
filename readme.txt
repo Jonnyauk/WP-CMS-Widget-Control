@@ -49,7 +49,7 @@ No - all active, configured widget settings in your theme will be lost when you 
 == Changelog ==
 
 = 1.1 =
-* Small text changes and tested full compatibility with WordPress 3.9x.
+* Small text changes, fix text domain for translation and tested full compatibility with WordPress 3.9x.
 
 = 1.0 =
 * Initial release.
