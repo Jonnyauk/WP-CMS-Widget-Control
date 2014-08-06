@@ -13,6 +13,7 @@
 /////////  VERSION HISTORY
 
 1.0		- First release
+1.1		- Minor tweaks, fix translation text domain 'wpcms-widget-setting'
 
 */
 
@@ -85,8 +86,8 @@ class wpcms_widget_control{
 	function admin_menu() {
 
 	    add_options_page(
-	    	esc_html__( 'Widget Control', $this->plugin ),
-	    	esc_html__( 'Widget Control', $this->plugin ),
+	    	esc_html__( 'Widget Control', 'wpcms-widget-setting' ),
+	    	esc_html__( 'Widget Control', 'wpcms-widget-setting' ),
 	    	'manage_options',
 	    	$this->plugin,
 	    	array($this,'admin_page')
@@ -106,13 +107,13 @@ class wpcms_widget_control{
 
 
 		echo '<div class="wrap">';
-		echo '<h2>' . esc_html__( 'WP-CMS Widget Control', $this->plugin ) . '</h2>';
+		echo '<h2>' . esc_html__( 'WP-CMS Widget Control', 'wpcms-widget-setting' ) . '</h2>';
 
 		echo '<form action="options.php" method="POST">';
-		submit_button( esc_html__('Update widget settings', $this->plugin) );
+		submit_button( esc_html__('Update widget settings', 'wpcms-widget-setting') );
 		settings_fields( $this->plugin . 'group1' );
 		do_settings_sections( $this->plugin . 'section1' );
-		submit_button( esc_html__('Update widget settings', $this->plugin) );
+		submit_button( esc_html__('Update widget settings', 'wpcms-widget-setting' ) );
 
 		echo '</form>';
 		echo '</div>';
@@ -163,10 +164,10 @@ class wpcms_widget_control{
 	function section_one_callback() {
 
 		echo '<p>';
-		esc_html_e( 'Tick checkbox to remove the selected widget from the widget admin area.', $this->plugin );
+		esc_html_e( 'Tick checkbox to remove the selected widget from the widget admin area.', 'wpcms-widget-setting' );
 		echo '</p>';
 		echo '<p><strong>';
-		esc_html_e( 'WARNING - DO NOT REMOVE WIDGETS YOU ARE CURRENTLY USING - you risk deleting them (and their settings) from your site - so use with caution!', $this->plugin );
+		esc_html_e( 'WARNING - DO NOT REMOVE WIDGETS YOU ARE CURRENTLY USING - you risk deleting them (and their settings) from your site - so use with caution!', 'wpcms-widget-setting' );
 		echo '</strong></p>';
 	}
 
