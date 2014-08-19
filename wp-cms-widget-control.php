@@ -167,7 +167,7 @@ class wpcms_widget_control{
 		esc_html_e( 'Tick checkbox to remove the selected widget from the widget admin area.', 'wpcms-widget-setting' );
 		echo '</p>';
 		echo '<p><strong>';
-		esc_html_e( 'WARNING - DO NOT REMOVE WIDGETS YOU ARE CURRENTLY USING - you risk deleting them (and their settings) from your site - so use with caution!', 'wpcms-widget-setting' );
+		esc_html_e( 'WARNING - DO NOT REMOVE WIDGETS YOU ARE CURRENTLY USING - you risk deleting them (and their settings) from your site - so PLEASE use this with caution!', 'wpcms-widget-setting' );
 		echo '</strong></p>';
 	}
 
