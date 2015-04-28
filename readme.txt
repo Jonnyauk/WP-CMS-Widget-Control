@@ -2,8 +2,8 @@
 Contributors: Jonnyauk
 Tags: widget, widgets, admin
 Requires at least: 3.0.1
-Tested up to: 3.9.1
-Stable tag: 1.1
+Tested up to: 4.2.1
+Stable tag: 1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -47,6 +47,9 @@ No - all active, configured widget settings in your theme will be lost when you 
 2. A simplifed widget control screen (Appearance->Widgets)
 
 == Changelog ==
+
+= 1.2 =
+* Tested full compatibility with WordPress 4.2.x
 
 = 1.1 =
 * Small text changes, fix text domain for translation and tested full compatibility with WordPress 3.9x.
