@@ -2,17 +2,17 @@
 Contributors: Jonnyauk
 Tags: widget, widgets, admin
 Requires at least: 3.0.1
-Tested up to: 4.2.1
-Stable tag: 1.1
+Tested up to: 4.4
+Stable tag: 1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Remove any core, theme or plugin widgets from the Widgets admin screen.
+Remove any available core, theme or plugin widgets from admin and customizer options.
 
 == Description ==
-<a href="http://codex.wordpress.org/WordPress_Widgets">Widgets</a> can be added to many areas within your theme, but you (and your users) may not need access to all the widgets available.
+<a href="http://codex.wordpress.org/WordPress_Widgets">Widgets</a> can be added to many areas within your theme, but you (and your users) may not need access to all the widgets provided by WordPress, your theme and other plugins.
 
-WordPress, your theme and plugins add additional widgets available to be used within your theme. This plugin provides simple admin controls that can remove any core WordPress widget, along with all (well coded) additional third-party widgets. Great for simplifying a cluttered widget screen, or if you limit user access to a smaller number of core widgets.
+This plugin provides simple admin controls that can remove any core WordPress widget, along with all (well coded) additional third-party widgets. Great for simplifying a cluttered widget screen, or if you limit user access to a smaller number of core widgets.
 
 This plugin can remove the following core WordPress widgets:
 
@@ -30,14 +30,14 @@ This plugin can remove the following core WordPress widgets:
 * Custom Menu widget
 
 == Installation ==
-1. Upload \"wp-cms-widget-control\" directory to the \"/wp-content/plugins/\" directory.
-2. Activate the plugin through the \"Plugins\" menu in WordPress.
-3. Go to Settings->Widget Control in the admin area.
-4. Select options to remove widgets available in Appearance->Widgets.
+1. Upload `wp-cms-widget-control` directory to the `/wp-content/plugins/` directory.
+2. Activate the plugin through the `Plugins` menu in WordPress.
+3. Go to `Settings->Widget Control` in the admin area.
+4. Select options to remove widgets available in `Appearance->Widgets` and `Customizer->Widgets`.
 
 == Frequently Asked Questions ==
 = What happens if I remove a widget that I am currently using? =
-**DO NOT do this!** It\'s best to remove the widgets from widget areas in Appearance->Widgets before removing any widgets using this plugin. Removed widgets will be removed *permanently* from your site (it won\'t go into inactive widgets) and all settings and configuration will be lost.
+**DO NOT do this!** Remove the widgets from widget areas in Appearance->Widgets before removing any widgets using this plugin. Removed widgets will be removed *permanently* from your site (not into inactive widgets) and all settings and configuration will likely be lost!
 
 = Are settings saved for removed widgets? =
 No - all active, configured widget settings in your theme will be lost when you remove a widget using this plugin. It should only be used for widgets you do not want to use in your theme.
@@ -49,10 +49,16 @@ No - all active, configured widget settings in your theme will be lost when you 
 == Changelog ==
 
 = 1.2 =
-* Tested full compatibility with WordPress 4.2.x
+* Fixed full compatibility with WordPress v4.3.x and tested with v4.4rc1
+* Options now control which widgets are available in Customizer too, not just admin
 
 = 1.1 =
-* Small text changes, fix text domain for translation and tested full compatibility with WordPress 3.9x.
+* Small text changes, fix text domain for translation and tested full compatibility with WordPress 3.9x
 
 = 1.0 =
-* Initial release.
+* Initial release
+
+== Upgrade Notice ==
+
+= 1.2 =
+Fixed compatibility with WordPress v4.3.x and tested with v4.4rc1. Added Customiser support.
