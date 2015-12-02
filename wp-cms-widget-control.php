@@ -4,7 +4,7 @@
  Plugin URI: http://wp-cms.com
  Description: Remove any core, theme or plugin widget from the Widgets setting screen.
  Author: Jonny Allbut
- Version: 1.1
+ Version: 1.2
  Author URI: http://jonnya.net
 */
 
@@ -12,7 +12,7 @@
 
 /////////  VERSION HISTORY
 
-1.2		- WordPress 4.2.x compatibility check
+1.2		- WordPress 4.3.x fix compatibility (also Customizer support)
 1.1		- Minor tweaks, fix translation text domain 'wpcms-widget-setting'
 1.0		- First release
 
@@ -24,10 +24,10 @@
  * Execute plugin
  *
  */
-function wpcms_wc_admin_do(){
-	$wpcms_wc_admin_do = ( is_admin() ) ? new wpcms_widget_control : '';
+function wpcms_wc_admin_do() {
+	$wpcms_wc_admin_do = ( is_admin() || is_customize_preview() ) ? new wpcms_widget_control : '';
 }
-add_action('init','wpcms_wc_admin_do',1);
+add_action( 'after_setup_theme','wpcms_wc_admin_do', 11 );
 
 
 /**
@@ -219,7 +219,7 @@ class wpcms_widget_control{
 
 		global $pagenow;
 
-		if ( $pagenow == 'widgets.php' && is_array($this->widget_data) ){
+		if ( (is_customize_preview() || $pagenow == 'widgets.php') && is_array($this->widget_data) ){
 			foreach ( $this->widget_data as $widget => $value ) {
 				unregister_widget($widget);
 			}
