@@ -35,7 +35,7 @@ add_action( 'after_setup_theme','wpcms_wc_admin_do', 11 );
  * All the widget control functionality
  *
  */
-class wpcms_widget_control{
+class wpcms_widget_control {
 
 
 	var $plugin; /* Common plugin definition */
@@ -43,7 +43,7 @@ class wpcms_widget_control{
 	var $widgets_available; /* Holds master array of all core WP widget data */
 
 
-	function __construct(){
+	function __construct() {
 
 		// Setup data
 		$this->plugin = 'wpcms-widget-setting';
@@ -63,12 +63,12 @@ class wpcms_widget_control{
 	 * Returns a cleaner array of widget data for use
 	 *
 	 */
-	function get_widgets(){
+	function get_widgets() {
 
 		$clean_array = '';
 
 		if ( is_array($this->widgets_available->widgets) && !empty($this->widgets_available->widgets) ){
-			foreach ($this->widgets_available->widgets as $key => $value) {
+			foreach ( $this->widgets_available->widgets as $key => $value ) {
 				$clean_array[$key]['nice_name'] = $value->name;
 				$clean_array[$key]['description'] = $value->widget_options['description'];
 			}
@@ -91,7 +91,7 @@ class wpcms_widget_control{
 	    	esc_html__( 'Widget Control', 'wpcms-widget-setting' ),
 	    	'manage_options',
 	    	$this->plugin,
-	    	array($this,'admin_page')
+	    	array( $this,'admin_page' )
 		);
 
 	}
