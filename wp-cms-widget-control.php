@@ -4,7 +4,7 @@
  Plugin URI: http://wp-cms.com
  Description: Remove any core, theme or plugin widget from the Widgets setting screen.
  Author: Jonny Allbut
- Version: 1.2
+ Version: 1.21
  Author URI: http://jonnya.net
 */
 
