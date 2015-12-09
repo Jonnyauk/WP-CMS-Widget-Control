@@ -3,7 +3,7 @@ Contributors: Jonnyauk
 Tags: widget, widgets, admin
 Requires at least: 3.0.1
 Tested up to: 4.4
-Stable tag: 1.2
+Stable tag: 1.21
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -42,11 +42,18 @@ This plugin can remove the following core WordPress widgets:
 = Are settings saved for removed widgets? =
 No - all active, configured widget settings in your theme will be lost when you remove a widget using this plugin. It should only be used for widgets you do not want to use in your theme.
 
+= Will this remove the widget added by a plugin or theme? =
+Almost certainly! Any well-coded theme or plugin that adds custom widgets for you to use, should show up in the options for you to remove! However, if your plugin or theme doesn't do things the WordPress way, sadly it won't be able to remove it - please contact the theme or plugin author!
+
 == Screenshots ==
 1. Admin screen for plugin (Settings->Widget Control)
 2. A simplifed widget control screen (Appearance->Widgets)
 
 == Changelog ==
+
+= 1.21 =
+* Checked full compatibility with WordPress v4.4x
+* Text string changes
 
 = 1.2 =
 * Fixed full compatibility with WordPress v4.3.x and tested with v4.4rc1
@@ -59,6 +66,9 @@ No - all active, configured widget settings in your theme will be lost when you 
 * Initial release
 
 == Upgrade Notice ==
+
+= 1.21 =
+Confirmed compatibility with WordPress 4.4 and minor text changes.
 
 = 1.2 =
 Fixed compatibility with WordPress v4.3.x and tested with v4.4rc1. Added Customiser support.

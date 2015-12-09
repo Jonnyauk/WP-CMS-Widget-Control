@@ -12,6 +12,7 @@
 
 /////////  VERSION HISTORY
 
+1.21	- WordPress 4.4 full compatiblity check and text tidying
 1.2		- WordPress 4.3.x fix compatibility (also Customizer support)
 1.1		- Minor tweaks, fix translation text domain 'wpcms-widget-setting'
 1.0		- First release
@@ -165,7 +166,7 @@ class wpcms_widget_control {
 	function section_one_callback() {
 
 		echo '<p>';
-		esc_html_e( 'Tick checkbox to remove the selected widget from the widget admin area.', 'wpcms-widget-setting' );
+		esc_html_e( 'Tick the relevant checkbox below to REMOVE the selected widget from the widget admin area and theme customizer.', 'wpcms-widget-setting' );
 		echo '</p>';
 		echo '<p><strong>';
 		esc_html_e( 'WARNING - DO NOT REMOVE WIDGETS YOU ARE CURRENTLY USING - you risk deleting them (and their settings) from your site - so PLEASE use this with caution!', 'wpcms-widget-setting' );
